@@ -16,7 +16,7 @@ Training data is drawn from four public sources:
 - ESC-50 — sneezing, clapping, breathing, laughing, dog barks, and ambient sounds; chosen specifically because they resemble coughs and make for hard negatives
 - [MUSAN](https://www.openslr.org/17/) — 500 clips of real speech
 - Synthetic — generated white noise, brown noise, tone bursts, and click transients
-- User-recorded — any sounds captured via `--record-negatives` at runtime (e.g. blowing air, throat clearing) are automatically oversampled to ensure the model learns to reject them
+- User-recorded — any sounds captured via using `src/record_samples.py` (e.g. blowing air, throat clearing) are automatically oversampled to ensure the model learns to reject them
 
 In total the dataset contains roughly 15,000 cough spectrograms and 45,000 non-cough spectrograms after windowing. Data files are not included in this repository; run `python src/download_data.py` to fetch them.
 

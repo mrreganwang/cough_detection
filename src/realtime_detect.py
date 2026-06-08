@@ -58,7 +58,7 @@ DEFAULT_FEATURE_PARAMS = {
     "n_fft": 1024,
     "hop_length": 256,
 }
-DEFAULT_THRESHOLD = 0.72
+DEFAULT_THRESHOLD = 0.45
 COOLDOWN_SECONDS = 0.75      # Minimum seconds between cough detections
 ENERGY_GATE_RMS = 0.003     # Skip near-silent frames
 

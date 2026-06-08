@@ -35,20 +35,20 @@ source venv/bin/activate
 # 1. Download training data (requires free Kaggle account)
 python src/download_data.py
 
-# 2. Prepare dataset
+# 2. Prepare dataset, convert audio files to mel spectrogram
 python src/prepare_dataset.py
 
 # 3. Train
 python src/train.py
 
-# 4. Run
-python src/realtime_detect.py
+# 4. Inference. Detect cough signals in real-time
+python src/realtime_detect.py --verbose --threshold 0.45
 ```
 
 Output:
 ```
 Cough 2024-01-15 14:23:07.412
-Cough 2024-01-15 14:23:07.891 (x2 in fit)
+Cough 2024-01-15 14:23:07.891
 ```
 
 ## Kaggle Setup
@@ -73,8 +73,8 @@ python src/realtime_detect.py --list-devices     # choose microphone
 If a sound triggers false detections, record it as a negative example and retrain:
 
 ```bash
-python src/realtime_detect.py --record-negatives  # make the sound, let it fire
-python src/prepare_dataset.py                     # recorded clips auto-oversampled
+python src/record_samples.py --negative           # press Enter to record the sound
+python src/prepare_dataset.py                     
 python src/train.py
 ```
 

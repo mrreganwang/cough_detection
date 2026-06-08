@@ -1,0 +1,15 @@
+{
+  "recommended_threshold": 0.5903518080711365,
+  "optimal_threshold_youdens_j": 0.5403518080711365,
+  "roc_auc": 0.9064770365105645,
+  "average_precision": 0.8251439987155642,
+  "feature_params": {
+    "sr": 22050,
+    "n_mels": 128,
+    "n_samples": 22050,
+    "fmin": 80,
+    "fmax": 8000,
+    "n_fft": 1024,
+    "hop_length": 256
+  }
+}

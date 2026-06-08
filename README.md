@@ -23,7 +23,7 @@ In total the dataset contains roughly 15,000 cough spectrograms and 45,000 non-c
 ## Setup
 
 ```bash
-git clone <your-repo>
+git clone https://github.com/mrreganwang/cough_detection.git
 cd cough_detector
 python -m venv venv
 source venv/bin/activate

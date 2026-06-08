@@ -70,7 +70,7 @@ python src/realtime_detect.py --list-devices     # choose microphone
 
 ## Fixing False Positives
 
-If a sound triggers false detections, record it as a negative example and retrain:
+To adapt to dynamic environments, if a sound triggers false detections, record it as a negative example and retrain:
 
 ```bash
 python src/record_samples.py --negative           # press Enter to record the sound
@@ -82,5 +82,3 @@ python src/train.py
 
 - Python 3.10+
 - macOS (MPS acceleration) or Linux/Windows (CPU)
-- ~4 GB disk space for datasets
-- ~3 GB RAM for dataset preparation
